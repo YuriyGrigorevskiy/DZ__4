@@ -12,6 +12,7 @@ public class Kotik {
     private static int count;
     private final static int METHODS = 5;
 
+
     public Kotik() {
         count++;
     }
