@@ -4,7 +4,7 @@ import food.Food;
 import food.Grass;
 import food.Meat;
 
-public class Duck extends Herbivore implements Swim,Fly,Voice {
+public class Duck extends Herbivore implements Swim,Fly,Voice,Run {
     private int satiety;
 
     public int getSatiety() {
@@ -14,6 +14,10 @@ public class Duck extends Herbivore implements Swim,Fly,Voice {
     @Override
     public void fly() {
         System.out.println("Утка летит");
+    }
+    @Override
+    public void run() {
+        System.out.println("Утка бегает");
     }
 
     @Override
@@ -31,7 +35,7 @@ public class Duck extends Herbivore implements Swim,Fly,Voice {
         if (food instanceof Meat){
             System.out.println("животное голодное");
         }else if (food instanceof Grass){
-            satiety = food.getEnetgy();
+            satiety = food.getEnergy();
             System.out.format("Животное сыто, уровень сытости - %d \n", satiety);
         }
         return satiety;

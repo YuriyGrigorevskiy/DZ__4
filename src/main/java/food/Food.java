@@ -2,5 +2,5 @@ package food;
 
 public abstract class Food {
 
-     public int getEnetgy(){ return 0;}
+     public int getEnergy(){ return 0;}
 }

@@ -29,7 +29,7 @@ public class Tiger extends Carnivorous implements Run,Voice,Swim {
     @Override
     public int eat(Food food) {
         if (food instanceof Meat){
-            satiety = food.getEnetgy();
+            satiety = food.getEnergy();
             System.out.format("Животное сыто, уровень сытости - %d \n", satiety);
         }else if (food instanceof Grass){
             System.out.println("животное голодное");

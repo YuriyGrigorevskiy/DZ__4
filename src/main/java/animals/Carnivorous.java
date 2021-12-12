@@ -4,7 +4,7 @@ import food.Food;
 import food.Grass;
 import food.Meat;
 
-public class Carnivorous extends Animal implements Fly,Run,Swim,Voice {
+public abstract class Carnivorous extends Animal implements Fly,Run,Swim,Voice {
 
     @Override
     public int eat(Food food) {return 0;

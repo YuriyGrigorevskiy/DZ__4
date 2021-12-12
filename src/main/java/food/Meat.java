@@ -3,7 +3,7 @@ package food;
 public class Meat extends Food{
 
 
-    public int getEnetgy() {
+    public int getEnergy() {
         return 20;
     }
 }

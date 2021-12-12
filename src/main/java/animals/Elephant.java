@@ -26,7 +26,7 @@ public class Elephant extends Herbivore implements Run,Voice {
         if (food instanceof Meat){
             System.out.println("животное голодное");
         }else if (food instanceof Grass){
-            satiety = food.getEnetgy();
+            satiety = food.getEnergy();
             System.out.format("Животное сыто, уровень сытости - %d \n", satiety);
         }
         return satiety;
