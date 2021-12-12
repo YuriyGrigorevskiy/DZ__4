@@ -6,8 +6,8 @@ import food.Meat;
 
 public class Zoo {
 
-    static Animal[] createPond(){
-        Animal[] animalSwim = new Animal[3];
+    public static Swim[] createPond(){
+        Swim[] animalSwim = new Swim[3];
         animalSwim[0] = new Duck();
         animalSwim[1] = new Fish();
         animalSwim[2] = new Tiger();
@@ -31,8 +31,8 @@ public class Zoo {
 
         e.getVoice(kotik);
 
-        for(Swim b1  : createPond()){
-            b1.swim();
+        for(Swim a : createPond()){
+            a.swim();
         }
 
 
