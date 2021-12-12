@@ -1,17 +1,16 @@
 package animals;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import food.Food;
+import food.Grass;
+import food.Meat;
 
-public class Kotik {
+public class Kotik extends Carnivorous implements Run, Voice{
     private String name;
     private String voice;
     private int satiety;
     private int weight;
     private static int count;
     private final static int METHODS = 5;
-
 
     public Kotik() {
         count++;
@@ -101,24 +100,24 @@ public class Kotik {
             int random = (int)(Math.random() * METHODS + 1);
             switch (random) {
                 case 1:
-                    if (play()) result[i]= (i+"-"+"играет");
-                    else { result[i]= (i+"-"+"ест"); eat(5);}
+                    if (play()) result[i]= (i +"-"+" играет");
+                    else { result[i]= (i +"-"+ "ест"); eat(5);}
                     break;
                 case 2:
-                    if (sleep()) {result[i]= (i+"-"+"спит");}
-                    else { result[i]= (i+"-"+"ест"); eat(5);}
+                    if (sleep()) {result[i]= (i +"-"+ "спит");}
+                    else { result[i]= (i +"-"+ "ест"); eat(5);}
                 break;
                 case 3:
-                    if (wash()){result[i]= (i+"-"+"моется");}
-                   else{result[i]= (i+"-"+"ест"); eat(5);}
+                    if (wash()){result[i]= (i +"-"+ "моется");}
+                   else{result[i]= (i +"-"+ "ест"); eat(5);}
                     break;
                 case 4:
-                    if (walk()){result[i]= (i+"-"+"бегает");}
-                    else {result[i]= (i+"-"+"ест"); eat(5);}
+                    if (walk()){result[i]= (i +"-"+ "бегает");}
+                    else {result[i]= (i +"-"+ "ест"); eat(5);}
                     break;
                 case 5:
-                    if (hunt()){result[i]= (i+"-"+"охотится");}
-                    else {result[i]= (i+"-"+"ест"); eat(5);}
+                    if (hunt()){result[i]= (i +"-"+ "охотится");}
+                    else {result[i]= (i +"-"+ "ест"); eat(5);}
                     break;
             }
         }
@@ -135,7 +134,7 @@ public class Kotik {
     }
 
     public String getVoice() {
-        return voice;
+     return "мяу-мяу";
     }
 
     public void setVoice(String voice) {
@@ -144,10 +143,6 @@ public class Kotik {
 
     public int getSatiety() {
         return satiety;
-    }
-
-    public void setSatiety(int satiety) {
-        this.satiety = satiety;
     }
 
     public int getWeight() {
@@ -163,5 +158,21 @@ public class Kotik {
     }
     public static void setCount(int count) {
         Kotik.count = count;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Котик бегает");
+    }
+
+    @Override
+    public int eat(Food food) {
+        if (food instanceof Meat){
+            satiety = food.getEnetgy();
+            System.out.format("Животное сыто, уровень сытости - %d \n", satiety);
+        }else if (food instanceof Grass){
+            System.out.println("Животное голодное");
+        }
+        return satiety;
     }
 }
