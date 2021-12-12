@@ -12,7 +12,7 @@ public class Worker {
         animal.eat(food);
     }
 
-    public void getVoice(Animal animal){
+    public void getVoice(Voice animal){
             System.out.println(animal.getVoice());
     }
 

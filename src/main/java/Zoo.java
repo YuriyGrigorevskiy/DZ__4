@@ -31,7 +31,7 @@ public class Zoo {
 
         e.getVoice(kotik);
 
-        for(Animal b1  : createPond()){
+        for(Swim b1  : createPond()){
             b1.swim();
         }
 
