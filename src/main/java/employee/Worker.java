@@ -6,17 +6,15 @@ import animals.Herbivore;
 import animals.Voice;
 import food.Food;
 
+import java.io.IOException;
+
 public class Worker {
 
-    public void feed(Animal animal, Food food){
+    public void feed(Animal animal, Food food) throws IOException {
         animal.eat(food);
     }
 
     public void getVoice(Voice animal){
             System.out.println(animal.getVoice());
-    }
-
-    public void getVoice(Fish animal){
-        System.exit(1);
     }
 }
