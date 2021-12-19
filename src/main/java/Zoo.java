@@ -24,7 +24,6 @@ public class Zoo {
         Duck duck = new Duck("Утка");
 
         carnivorousAviary.addAnimal("Лёва",lion);
-
     }
 
     public static void fillHerbivoreAviary(){
@@ -49,5 +48,6 @@ public class Zoo {
 
           fillCarnivorousAviary();
           getCarnivorous("Лёва");
+
     }
 }
