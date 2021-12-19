@@ -1,6 +1,6 @@
 package model;
 
-public class WrongSizeException extends RuntimeException {
+public class WrongSizeException extends Exception {
     public WrongSizeException(String wrongFoodException) {
     }
 }

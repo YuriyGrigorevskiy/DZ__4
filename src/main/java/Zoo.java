@@ -1,7 +1,7 @@
 import animals.*;
-
 import model.Aviary;
 import model.Size;
+import model.WrongSizeException;
 
 
 public class Zoo {
@@ -16,7 +16,7 @@ public class Zoo {
     public static Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
     public static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
 
-    public static void fillCarnivorousAviary(){
+    public static void fillCarnivorousAviary() throws WrongSizeException {
         Kotik kotik = new Kotik("Вася");
         Lion lion = new Lion("Лёва");
         Lion lion1 = new Lion("Лёва2");
@@ -26,7 +26,7 @@ public class Zoo {
         carnivorousAviary.addAnimal("Лёва",lion);
     }
 
-    public static void fillHerbivoreAviary(){
+    public static void fillHerbivoreAviary() throws WrongSizeException {
         Kotik kotik = new Kotik("Вася");
         Lion lion = new Lion("Лёва");
         Duck duck = new Duck("Утка");
@@ -44,7 +44,7 @@ public class Zoo {
         herbivoreAviary.getAnimal(name);
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws WrongSizeException {
 
           fillCarnivorousAviary();
           getCarnivorous("Лёва");

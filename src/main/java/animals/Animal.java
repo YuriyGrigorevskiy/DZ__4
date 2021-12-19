@@ -1,6 +1,7 @@
 package animals;
 
 import food.Food;
+import food.WrongFoodException;
 import model.Size;
 import java.io.IOException;
 
@@ -18,7 +19,7 @@ public abstract class Animal {
 
     private int satiety;
 
-    public abstract int eat(Food food) throws IOException;
+    public abstract int eat(Food food) throws IOException, WrongFoodException;
 
     public int getSatiety() {
         return 0;

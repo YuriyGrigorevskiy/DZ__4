@@ -5,12 +5,13 @@ import animals.Fish;
 import animals.Herbivore;
 import animals.Voice;
 import food.Food;
+import food.WrongFoodException;
 
 import java.io.IOException;
 
 public class Worker {
 
-    public void feed(Animal animal, Food food) throws IOException {
+    public void feed(Animal animal, Food food) throws IOException, WrongFoodException {
         animal.eat(food);
     }
 

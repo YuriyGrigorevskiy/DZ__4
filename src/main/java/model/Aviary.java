@@ -1,5 +1,4 @@
 package model;
-
 import animals.Animal;
 import java.util.HashMap;
 
@@ -12,7 +11,7 @@ public class Aviary <T extends Animal> {
 
     public HashMap <String, T > collections = new HashMap<>();
 
-    public void addAnimal(String name, T animal){
+    public void addAnimal(String name, T animal) throws WrongSizeException {
             if(size.equals(animal.getSize()))
         collections.put(name, animal);
             else {
@@ -21,7 +20,8 @@ public class Aviary <T extends Animal> {
 
 
     public void getAnimal(String name){
-        System.out.println(collections.get(name));
+        T animal = collections.get(name);
+        System.out.println(animal);
     }
 
     public boolean removeAnimal(String name){
