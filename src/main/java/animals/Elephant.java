@@ -9,6 +9,7 @@ import model.Size;
 public class Elephant extends Herbivore implements Run,Voice {
     private int satiety;
 
+
     public Elephant(String name) {
         super(name);
     }

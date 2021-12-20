@@ -9,6 +9,7 @@ import model.Size;
 public class Lion extends Carnivorous implements Run,Voice,Swim{
     private int satiety;
 
+
     public Lion(String name) {
         super(name);
     }

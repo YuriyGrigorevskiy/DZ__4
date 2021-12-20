@@ -16,24 +16,24 @@ public class Zoo {
     public static Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
     public static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
 
-    public static void fillCarnivorousAviary() throws WrongSizeException {
+    public static void fillCarnivorousAviary()  {
         Kotik kotik = new Kotik("Вася");
         Lion lion = new Lion("Лёва");
         Lion lion1 = new Lion("Лёва2");
         Lion lion2 = new Lion("Лёва3");
         Duck duck = new Duck("Утка");
 
-        carnivorousAviary.addAnimal("Лёва",lion);
+        carnivorousAviary.addAnimal(lion);
     }
 
-    public static void fillHerbivoreAviary() throws WrongSizeException {
+    public static void fillHerbivoreAviary() {
         Kotik kotik = new Kotik("Вася");
         Lion lion = new Lion("Лёва");
         Duck duck = new Duck("Утка");
         Elephant elephant = new Elephant("Слоник");
         Fish fish = new Fish("Рыбка");
 
-        herbivoreAviary.addAnimal("Утка",duck);
+        herbivoreAviary.addAnimal(duck);
     }
 
     public static void getCarnivorous (String name){
@@ -44,10 +44,9 @@ public class Zoo {
         herbivoreAviary.getAnimal(name);
     }
 
-    public static void main(String[] args) throws WrongSizeException {
+    public static void main(String[] args) {
 
           fillCarnivorousAviary();
           getCarnivorous("Лёва");
-
     }
 }

@@ -3,6 +3,7 @@ package animals;
 import food.Food;
 import food.Meat;
 import food.WrongFoodException;
+import model.Size;
 
 public abstract class Carnivorous extends Animal {
 
