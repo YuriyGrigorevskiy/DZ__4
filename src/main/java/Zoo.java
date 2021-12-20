@@ -52,10 +52,11 @@ public class Zoo {
           getCarnivorous("Лёва");
 
         Kotik kotik = new Kotik("Вася");
+        Lion lion = new Lion("Лёва");
         Duck duck = new Duck("Утка");
         Meat meet = new Meat();
         Grass gress = new Grass();
 
-        duck.eat(meet);
+        lion.eat(gress);
     }
 }

@@ -46,7 +46,6 @@ public class Duck extends Herbivore implements Swim,Fly,Voice,Run {
     public int eat(Food food) {
         try{
         if (food instanceof Meat){
-            System.out.println("животное голодное");
             throw new WrongFoodException("WrongFoodException");
         }
         else if (food instanceof Grass){

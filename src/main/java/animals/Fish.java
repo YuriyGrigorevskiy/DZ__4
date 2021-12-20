@@ -31,7 +31,6 @@ public class Fish extends Herbivore implements Swim {
     public int eat(Food food) {
         try{
             if (food instanceof Meat){
-                System.out.println("животное голодное");
                 throw new WrongFoodException("WrongFoodException");
             }
             else if (food instanceof Grass){

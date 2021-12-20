@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class Worker {
 
-    public void feed(Animal animal, Food food) throws IOException {
+    public void feed(Animal animal, Food food) throws Exception {
         animal.eat(food);
     }
 

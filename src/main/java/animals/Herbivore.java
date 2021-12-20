@@ -10,13 +10,13 @@ public abstract class Herbivore extends Animal  {
         super(name);
     }
 
-    @Override
-    public int eat(Food food) throws WrongFoodException {
-            if(food instanceof Grass){
-                return 0;
-            }
-            else{
-                throw new WrongFoodException("WrongFoodException");
-            }
-    }
+//    @Override
+//    public int eat(Food food) throws WrongFoodException {
+//            if(food instanceof Grass){
+//                return 0;
+//            }
+//            else{
+//                throw new WrongFoodException("WrongFoodException");
+//            }
+//    }
 }

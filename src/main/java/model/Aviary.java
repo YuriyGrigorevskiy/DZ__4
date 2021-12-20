@@ -14,11 +14,11 @@ public class Aviary <T extends Animal> {
         this.size=size;
     }
 
-    public HashMap <String, T > aviaryMap = new HashMap<>();
+    private HashMap <String, T > aviaryMap = new HashMap<>();
 
-    public Animal addAnimal(T animal)  {
+    public void addAnimal(T animal)  {
             if(size.equals(animal.getSize())){
-                return aviaryMap.put(animal.getName(),animal);}
+                aviaryMap.put(animal.getName(),animal);}
             else {
                 throw new WrongSizeException("WrongFoodException");}
     }

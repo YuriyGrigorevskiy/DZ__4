@@ -39,7 +39,6 @@ public class Lion extends Carnivorous implements Run,Voice,Swim{
                 System.out.format("Животное сыто, уровень сытости - %d \n", satiety);
             }
             else if (food instanceof Grass){
-                System.out.println("Животное голодное");
                 throw new WrongFoodException("WrongFoodException");}
         }
         catch (WrongFoodException e) {

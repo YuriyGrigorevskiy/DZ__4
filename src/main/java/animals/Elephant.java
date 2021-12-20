@@ -36,7 +36,6 @@ public class Elephant extends Herbivore implements Run,Voice {
     public int eat(Food food) {
         try{
             if (food instanceof Meat){
-                System.out.println("животное голодное");
                 throw new WrongFoodException("WrongFoodException");
             }
             else if (food instanceof Grass){
