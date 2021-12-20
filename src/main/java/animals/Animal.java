@@ -19,7 +19,7 @@ public abstract class Animal {
 
     private int satiety;
 
-    public abstract int eat(Food food) throws IOException, WrongFoodException;
+    public abstract int eat(Food food) throws  WrongFoodException;
 
     public int getSatiety() {
         return 0;

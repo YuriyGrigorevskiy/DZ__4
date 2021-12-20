@@ -1,9 +1,11 @@
 package model;
 import animals.Animal;
+import animals.Carnivorous;
+
 import java.util.HashMap;
 
 public class Aviary <T extends Animal> {
-    public Size size;
+    private Size size;
     public Size getSize() {
         return size;
     }
@@ -12,23 +14,24 @@ public class Aviary <T extends Animal> {
         this.size=size;
     }
 
-    public HashMap <String, T > collections = new HashMap<>();
+    public HashMap <String, T > aviaryMap = new HashMap<>();
 
-    public void addAnimal(T animal)  {
+    public Animal addAnimal(T animal)  {
             if(size.equals(animal.getSize())){
-        collections.put(animal.getName(),animal);}
+                return aviaryMap.put(animal.getName(),animal);}
             else {
                 throw new WrongSizeException("WrongFoodException");}
     }
 
-    public void getAnimal(String name){
-        T animal = collections.get(name);
+    public T getAnimal(String name){
+        T animal = aviaryMap.get(name);
         System.out.println(animal);
+        return animal;
     }
 
     public boolean removeAnimal(String name){
-        if (collections.containsKey(name)){
-            collections.remove(name);
+        if (aviaryMap.containsKey(name)){
+            aviaryMap.remove(name);
             return true;
         }else{
             return false;

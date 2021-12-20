@@ -1,4 +1,6 @@
 import animals.*;
+import food.Grass;
+import food.Meat;
 import model.Aviary;
 import model.Size;
 import model.WrongSizeException;
@@ -13,8 +15,8 @@ public class Zoo {
         animalSwim[2] = new Tiger("тигр");
         return animalSwim;
     }
-    public static Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
-    public static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
+    private static Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
+    private static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.MEDIUM);
 
     public static void fillCarnivorousAviary()  {
         Kotik kotik = new Kotik("Вася");
@@ -36,17 +38,24 @@ public class Zoo {
         herbivoreAviary.addAnimal(duck);
     }
 
-    public static void getCarnivorous (String name){
-        carnivorousAviary.getAnimal(name);
+    public static Carnivorous getCarnivorous (String name){
+        return carnivorousAviary.getAnimal(name);
     }
 
-    public static void getHerbivore (String name){
-        herbivoreAviary.getAnimal(name);
+    public static Herbivore getHerbivore (String name){
+        return herbivoreAviary.getAnimal(name);
     }
 
     public static void main(String[] args) {
 
           fillCarnivorousAviary();
           getCarnivorous("Лёва");
+
+        Kotik kotik = new Kotik("Вася");
+        Duck duck = new Duck("Утка");
+        Meat meet = new Meat();
+        Grass gress = new Grass();
+
+        duck.eat(meet);
     }
 }
