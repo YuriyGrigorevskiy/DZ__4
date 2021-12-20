@@ -3,7 +3,11 @@ import animals.Animal;
 import java.util.HashMap;
 
 public class Aviary <T extends Animal> {
-    private  Size size;
+    public Size size;
+
+    public Size getSize() {
+        return size;
+    }
 
     public Aviary(Size size){
         this.size=size;
@@ -11,13 +15,12 @@ public class Aviary <T extends Animal> {
 
     public HashMap <String, T > collections = new HashMap<>();
 
-    public void addAnimal(String name, T animal) throws WrongSizeException {
-            if(size.equals(animal.getSize()))
-        collections.put(name, animal);
+    public void addAnimal(String name, T animal)  {
+            if(getSize().equals(animal.getSize())){
+        collections.put(name, animal);}
             else {
                 throw new WrongSizeException("WrongFoodException");}
     }
-
 
     public void getAnimal(String name){
         T animal = collections.get(name);
