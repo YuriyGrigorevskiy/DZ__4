@@ -33,18 +33,8 @@ public class Zoo {
 
         for(Swim a : createPond()){
             a.swim();
-        }
 
 
 
 
 
-
-
-
-
-
-
-
-    }
-}
