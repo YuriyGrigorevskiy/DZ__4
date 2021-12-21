@@ -2,31 +2,21 @@ package animals;
 
 import food.Food;
 import food.Grass;
-import food.Meat;
+import food.WrongFoodException;
 
-public abstract class Herbivore extends Animal implements Fly,Run,Swim,Voice {
+public abstract class Herbivore extends Animal  {
 
-    @Override
-    public int eat(Food food) {return 0;
+    public Herbivore(String name) {
+        super(name);
     }
 
     @Override
-    public void fly() {
-        System.out.println();
-    }
-
-    @Override
-    public void run() {
-        System.out.println();
-    }
-
-    @Override
-    public void swim() {
-        System.out.println();
-    }
-
-    @Override
-    public String getVoice() {
-        return null;
+    public int eat(Food food) throws WrongFoodException {
+            if(food instanceof Grass){
+                return 0;
+            }
+            else{
+                throw new WrongFoodException("WrongFoodException");
+            }
     }
 }
