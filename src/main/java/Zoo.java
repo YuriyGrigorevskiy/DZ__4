@@ -28,6 +28,8 @@ public class Zoo {
 
 
         carnivorousAviary.addAnimal(lion);
+        carnivorousAviary.addAnimal(lion1);
+        carnivorousAviary.addAnimal(lion2);
     }
 
     public static void fillHerbivoreAviary() {
@@ -50,15 +52,21 @@ public class Zoo {
 
     public static void main(String[] args) {
 
-          fillCarnivorousAviary();
-          getCarnivorous("Лёва");
+              fillCarnivorousAviary();
+              getCarnivorous("Лёва");
+              getCarnivorous("Лёва2");
+              getCarnivorous("Лёва3");
 
-        Kotik kotik = new Kotik("Вася");
-        Lion lion = new Lion("Лёва");
-        Duck duck = new Duck("Утка");
-        Meat meet = new Meat();
-        Grass gress = new Grass();
 
-        lion.eat(gress);
+
+
+
+
+
+
+
+
+
+
     }
 }
