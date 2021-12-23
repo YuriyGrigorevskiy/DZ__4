@@ -9,7 +9,6 @@ public class Calculator {
             case "+": operation = a+b; break;
             case "-": operation = a-b; break;
             case "*": operation = a*b; break;
-            case "/": operation = a/b; break;
         }
         return String.valueOf(operation);
     }

@@ -10,7 +10,7 @@ public class PositiveCalculatorTest {
          return  new  Object [][] {
                  {"1","0","1","+"},
                  {"0","1","1","-"},
-                 {"99","3","33","*"}
+                 {"99","3","33","*"},
         };
     }
 
