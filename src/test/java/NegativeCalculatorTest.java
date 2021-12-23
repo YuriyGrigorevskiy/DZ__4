@@ -12,7 +12,7 @@ public class NegativeCalculatorTest {
         return  new  Object [][] {
                 {"-1","0","-101","+"},
                 {"0","2","0","-"},
-                {"101","50","2","*"}
+                {"1000","50","2","*"}
         };
     }
 
